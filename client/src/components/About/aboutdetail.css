@@ -1,0 +1,117 @@
+.aboutdetailfirst{
+    display: flex;
+    margin-top: 10px;  
+    /* align-items:center;   */
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.abu{
+    justify-content: center;
+    right: 0;
+    /* margin-left: 250px; */
+    margin-top: 60px;
+    position: absolute;
+    height: 450px;
+    margin-right: 120px;
+    /* object-fit: contain; */
+}
+
+.aboutwriting{
+    order: 3;
+    margin-top: 50px;
+    position:absolute;
+    color: rgb(255, 255, 255);
+    margin-left: 80px;
+}
+.aboutwriting h1{
+    font-weight: bold;
+    font-size: 2.9pc;
+    color: aqua;;
+}
+.aboutwriting p{
+    margin-top: 40px;
+    font-weight: 800;
+    font-size: 19px;
+}
+.aboutdetailfirst p span{
+    color: rgba(25, 15, 56, 0.779);
+}
+
+.aboutbox{
+    border:solid rgb(0, 119, 255) ;
+    background-color: rgb(0, 119, 255);
+    height: 600px;
+    width: 100vw;
+}
+.aboutcommunity{
+    display:flex;
+    margin-top: 100px;
+
+}
+.aboutcommunitywrite {
+    margin-left: 200px;
+    font-size: larger;
+    margin-right: 190px;
+}
+.aboutcommunitywrite h1{
+    margin-bottom: 20px;
+    font-weight:300;
+    color:rgb(50, 50, 93);
+}
+.aboutcommunitywrite h1 span{
+    color: #3460ac;
+    font-weight: bold;
+}
+.aboutcommunitywrite p{
+    font-size:20px;
+    font-weight: 530;
+}
+.aboutwhat{
+    margin-top: 80px;
+}
+.aboutwhatbox{
+    border: solid #ffffff;
+    height: 400px;
+    background-color: #ffffff;
+    display: flex;
+    background-image: url("https://www.gopgo.in/assets/new_ui/img/aboutusWhatwedobg-35fc63110dc7afc49de95f3d46b802f09d35f922244e34a321f68667afe019cc.png");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+}
+.aboutwhatboximg{
+    margin-top: 70px;
+    margin-left: 200px;
+}
+.aboutwhatboxwrite{
+    margin-top: 70px;
+    margin-left: 140px;
+}
+.aboutwhatboxwrite h1{
+    margin-bottom: 20px;
+    font-weight:300;
+    color:rgb(50, 50, 93);
+}
+.aboutwhatboxwrite h1 span{
+    color: #3460ac;
+    font-weight: bold;
+}
+.aboutwhatboxwrite p{
+    color: #0f203e;
+    font-size: 20px;
+}
+.aboutteam{
+    margin-top: 50px;
+    border: solid #ffffff;
+    background-color: aquamarine;
+    height: 600px;
+}
+.aboutteam h1{
+    text-align: center;
+}
+.aboutcard{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+}

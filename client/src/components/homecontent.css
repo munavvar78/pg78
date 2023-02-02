@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    margin: auto;
+    margin-bottom: 215px;
+ 
+}.container div{
+    padding-left: 40px;
+    padding-top: 15px;
+    margin-top: 170px;
+    font-size: x-large;
+    color: rgb(49, 82, 164);
+}
+.image{
+    flex:50%;
+    margin-top: 120px;
+    margin-left: 220px;
+    position:relative;
+    height: 400px;
+    object-fit: contain;
+}

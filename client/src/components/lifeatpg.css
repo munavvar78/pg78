@@ -1,0 +1,61 @@
+.lifeatpg{
+    padding-top: 60px;
+    color: rgb(0, 0, 0);
+    background-color: #f7faff;
+    margin-top: 45px;
+}
+.lifeatpglogo{
+    font: 3em sans-serif;
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.lifeatpglink ul{
+    font-size: x-large;
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 55px;
+}
+.community{
+    display: flex;
+    transition: opacity .15s linear;
+    color: rgb(27, 4, 237);
+    
+}
+.community-box{
+    border:  solid #f7faff;
+    display: flex;
+    transition: opacity .15s linear
+        
+}
+.communityimg img{
+    height: 300px;
+    margin-right: 50px;
+    margin-left: 390px;
+
+}
+.communitydetail{
+    margin-top: 50px;
+
+}
+.communitydetail img{
+    margin-bottom: 15px
+}
+.communitydetail h3{
+    font: 1em sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 15px
+}
+.communitydetail p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+}
+#hello{
+    transition: opacity .15s linear;
+    transition: 0.5s;
+    animation: forwards;
+}       
+#hii{
+    transition: opacity .15s linear  
+}

@@ -1,0 +1,31 @@
+.pgdetail{
+    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-day-blackboard-book-black-background-picture-image_870017.jpg");
+}
+.pgdetailbox{
+    color: rgb(44, 150, 157);
+    border: 0px solid black;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0);
+    /* width: 50%; */
+}
+.pgdetailbox h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pgdetailbox img{
+    margin-left: 50px;
+    height: 400px;
+}
+.pgdetailbox pre{
+    margin-top: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-break: break-word;
+    margin-left: 50px;
+    line-break: normal;
+    margin-bottom: 20px;
+    text-align:justify;
+    margin-right: 50px
+
+}
