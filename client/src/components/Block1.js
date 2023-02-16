@@ -6,20 +6,20 @@ const Block1 = () => {
         <div className='top'>
          <div className='topdiv'><h1>WhY Book My PG?</h1>
          <p>
-          Our aim to develop website which can help <br></br>
-          student to find their PG according to their<br></br>
+          Our aim to develop website which can help 
+          student to find their PG according to their
           near college
          </p>
          </div>
-         <div className='whypg'>
-          <ul>
+         <div className='whypgdiv'>
+          <ul className='whypg'>
             <li className='why-pgo-property'>
               <div className='why-pgo-property-image'>
                 <img src="https://www.gopgo.in/assets/new_look/homeWhypgoPocket-e020c49d048a091e3391aa8401d362dd38593ce1dabd7964c3d997261f7e4511.png" alt='paisa'></img>
               </div>
               <div className='why-pgo-property-detail'>
                 <h3>Easier on the Pocket</h3>
-                <p>No commuting to multiple locations, no brokerage fee,<br></br> no hidden costs because you deserve the best.</p>
+                <p>No commuting to multiple locations, no brokerage fee, no hidden costs because you deserve the best.</p>
               </div>
             </li>
             <li className='why-pgo-property'>
@@ -28,7 +28,7 @@ const Block1 = () => {
               </div>
               <div className='why-pgo-property-detail'>
                 <h3>Easier on the Pocket</h3>
-                <p>No commuting to multiple locations, no brokerage fee,<br></br> no hidden costs because you deserve the best.</p>
+                <p>No commuting to multiple locations, no brokerage fee, no hidden costs because you deserve the best.</p>
               </div>
             </li>
             <li className='why-pgo-property'>
@@ -37,7 +37,7 @@ const Block1 = () => {
               </div>
               <div className='why-pgo-property-detail'>
                 <h3>Easier on the Pocket</h3>
-                <p>No commuting to multiple locations, no brokerage fee,<br></br> no hidden costs because you deserve the best.</p>
+                <p>No commuting to multiple locations, no brokerage fee,   no hidden costs because you deserve the best.</p>
               </div>
             </li>
           </ul>

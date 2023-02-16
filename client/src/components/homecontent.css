@@ -6,20 +6,58 @@
 .container{
     display: flex;
     margin: auto;
-    margin-bottom: 215px;
+    /* margin-bottom: 215px; */
+    height: 70vh;
+    margin-top: 120px;
+    margin-left: 20px
  
-}.container div{
-    padding-left: 40px;
-    padding-top: 15px;
-    margin-top: 170px;
-    font-size: x-large;
-    color: rgb(49, 82, 164);
 }
+.studenth1{
+    flex: 50%;
+    width: 100%;
+}
+.container div{
+    /* flex: 50%; */
+    /* padding-left: 40px; */
+    /* padding-top: 15px; */
+    /* margin-top: 170px; */
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+}
+
 .image{
     flex:50%;
-    margin-top: 120px;
-    margin-left: 220px;
-    position:relative;
+    /* margin-top: 120px; */
+    /* margin-left: 220px; */
+    /* position:relative; */
     height: 400px;
     object-fit: contain;
+}
+@media screen and (max-width: 780px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        height: 20vh;
+        /* overflow: hidden; */
+    }
+    .image{
+        flex:50%;
+        display: none;
+        align-items: flex-end;
+        height: 300px;
+        width: 400px;
+        
+    }
+    .studenth1{
+        flex: 50%;
+        /* width: 170px; */
+    }
+    .container div{
+        flex: 50%;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        /* margin-left: 120px; */
+    }
+
 }

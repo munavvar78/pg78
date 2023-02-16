@@ -24,6 +24,7 @@ import { contactsData } from '../data/contactsData';
 
  
 import './footer.css';
+import { purple } from '@material-ui/core/colors';
 
 function Contacts() {
     const [open, setOpen] = useState(false);
@@ -47,30 +48,30 @@ function Contacts() {
 
     const useStyles = makeStyles({
         input: {
-            border: `4px solid ${theme.primary80}`,
+            border: "4px solid purple",
             backgroundColor: `${theme.secondary}`,
             color: `${theme.tertiary}`,
             fontFamily: 'var(--primaryFont)',
-            fontWeight: 500,
+            fontWeight:500,
             transition: 'border 0.2s ease-in-out',
             '&:focus': {
                 border: `4px solid ${theme.primary600}`,
             },
         },
         message: {
-            border: `4px solid ${theme.primary80}`,
+            border: "4px solid purple" ,
             backgroundColor: `${theme.secondary}`,
             color: `${theme.tertiary}`,
             fontFamily: 'var(--primaryFont)',
-            fontWeight: 500,
+            fontWeight: 'bolder',
             transition: 'border 0.2s ease-in-out',
             '&:focus': {
                 border: `4px solid ${theme.primary600}`,
             },
         },
         label: {
-            backgroundColor: `${theme.secondary}`,
-            color: `${theme.primary}`,
+            backgroundColor: "black",
+            color: "white",
             fontFamily: 'var(--primaryFont)',
             fontWeight: 600,
             fontSize: '0.9rem',
@@ -86,7 +87,7 @@ function Contacts() {
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: '21px',
-            backgroundColor: theme.primary,
+            backgroundColor: "purple",
             color: theme.secondary,
             transition: '250ms ease-in-out',
             '&:hover': {
@@ -96,7 +97,7 @@ function Contacts() {
             },
         },
         detailsIcon: {
-            backgroundColor: theme.primary,
+            backgroundColor: "purple",
             color: theme.secondary,
             borderRadius: '50%',
             width: '45px',
@@ -114,7 +115,7 @@ function Contacts() {
             },
         },
         submitBtn: {
-            backgroundColor: theme.primary,
+            backgroundColor: "purple",
             color: theme.secondary,
             transition: '250ms ease-in-out',
             '&:hover': {
@@ -178,10 +179,10 @@ function Contacts() {
         <div
             className='contacts'
             id='contacts'
-            style={{ backgroundColor: theme.secondary }}
+            style={{ backgroundColor:"gray" }}
         >
             <div className='contacts--container'>
-                <h1 style={{ color: theme.primary }}>Contacts</h1>
+                <h1 style={{ color: purple }}>Contacts</h1>
                 <div className='contacts-body'>
                     <div className='contacts-form'>
                         <form ref={form} onSubmit={handleContactForm}>

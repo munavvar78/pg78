@@ -22,10 +22,12 @@ const Header = ({user}) => {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJcG3xqrt_x4XTCzFhvI7MXW4-kwedmf6S1A&usqp=CAU"
             alt="logo"
           ></img>
+          <Link to='/'>
           <h2>
             <span>B</span>ook
             <span>M</span>yPg
           </h2>
+          </Link>
         </div>
         <div
           className={isMobile ? "nav-links-mobile" : "menu-link"}

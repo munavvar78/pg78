@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // hbs.registerPartials(partials_path);
 // app.get("/register", (req, res) => {
   //   res.render("register");
-  // });
+  // }); 
   let select=''
 const storage = multer.diskStorage({
   destination:'uploads',
@@ -52,7 +52,7 @@ Pgs.findOne({_id:ObjectId(id)}).then(items=>{
   app.post('/pginsert',(req,res)=>{
     upload(req,res,(err)=>{
 
-      console.log(req.body);
+      console.log(req.body.file);
       if(err){
         console.log(err)
       }
@@ -63,9 +63,22 @@ Pgs.findOne({_id:ObjectId(id)}).then(items=>{
           select:req.body.select,
           file:req.body.file,
           price:req.body.price,
-          description:req.body.description,
-          address:req.body.address
-           })
+          number:req.body.number,
+          product:req.body.product,
+          aboutus:req.body.aboutus,
+          location:req.body.location,
+          address:req.body.address,
+          curfew:req.body.curfew,
+          studyroom:req.body.studyroom,
+          deposite:req.body.deposite,
+          visitorallowed:req.body.visitorallowed,
+          meals:req.body.meals,
+          kitchen:req.body.kitchen,
+          freeparking:req.body.freeparking,
+          reception:req.body.reception,
+          elveter:req.body.elveter,
+          carparking:req.body.carparking,
+        })
         newPg.save().then(()=>res.send({message:"succefully registered"})).catch((err)=>console.log(err))
       }
     })

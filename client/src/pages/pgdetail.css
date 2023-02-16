@@ -1,31 +1,85 @@
-.pgdetail{
-    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-day-blackboard-book-black-background-picture-image_870017.jpg");
-}
 .pgdetailbox{
-    color: rgb(44, 150, 157);
-    border: 0px solid black;
-    width: 600px;
-    margin: auto;
-    margin-top: 20px;
-    background-color: rgb(0, 0, 0);
-    /* width: 50%; */
-}
-.pgdetailbox h2{
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 50px;
 }
 .pgdetailbox img{
-    margin-left: 50px;
+    margin-left: 150px;
+    margin-top: 150px;
     height: 400px;
 }
-.pgdetailbox pre{
-    margin-top: 60px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    word-break: break-word;
-    margin-left: 50px;
-    line-break: normal;
+.open24{
+    color: rgb(51, 128, 51);
+    font-size: 20px;
+}
+.cityname{
+    font-size: 20px;
+}
+.aboutpg{
+    display: flex;
+}
+.desc{
+    flex: 50%;
+    text-align: justify;
+    font-size: 17px;
+    font-weight: bold;
+}
+.imageabout{
+    flex: 50%;
+}
+.imagepg{
+    height: 300px;
+}
+.dataabout{
+    margin-top: 20px;
     margin-bottom: 20px;
-    text-align:justify;
-    margin-right: 50px
+}
+.datalocation{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dataproduct{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.pgdetailname{
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 0px solid rgb(255, 255, 255);
+    height: 150px;
+}
 
+.servicepg{
+    display: flex;
+    height: 250px;
+}
+.serviceul{
+    display: flex;
+    flex: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.service{
+    width: 200px;
+    display: flex;
+    flex-direction:row;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+.service h3{
+    margin-left: 12px;
+    margin-bottom: 4px;
+}
+.pgaddress{
+    margin-top: 50px;
+    font-size: 17px;
+    margin-right: 150px;
+    border: 0px solid rgb(125, 120, 120);
+}
+.pgaddress h1{
+    margin-bottom: 12px;
+}
+.checkIcon{
+    margin-top: 2px;
 }

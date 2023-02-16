@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./register.css";
 import axios from "axios";
 import {
@@ -160,8 +160,19 @@ const Register = () => {
       </FormControl>
 
       <Button variant="contained" color="primary" onClick={register}>Register</Button>
-      <div>or</div>
-      <Button variant="contained" color="primary" onClick={() => history.push("/login")}>Login</Button>
+      <br />
+        <div className="Or">or</div>
+        <div className="loginnewuser">
+       <p> Existing User ? </p>&nbsp;&nbsp;
+        <Link
+          className="signUp"
+          variant="contained"
+          color="primary"
+          onClick={() => history.push("/login")}
+        >
+          Login
+        </Link>
+        </div>
     </div>
   );
 };

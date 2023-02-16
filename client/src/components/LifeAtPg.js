@@ -57,7 +57,7 @@ const LifeAtPg=()=> {
            :''}
             
         </div>
-        <div id="#">
+        <div>
         {comfert?<div className="community">
             <div className="community-box">
             <div className="communityimg">
@@ -66,12 +66,12 @@ const LifeAtPg=()=> {
             <div className="communitydetail">
                 <img src="https://www.gopgo.in/assets/new_look/homeLifepgoComfortableicon-2624ee9214b16c13f21a2a2ea41abe4bac6c6ae3273e3eb2972b47636b841e6f.png" alt="rhr"></img>
                 <h3>Comfert Living</h3>
-                From comfy beds to plush bean bags, PGO properties<br/> are made for you to unwind after a long day.
+                <p>From comfy beds to plush bean bags, PGO properties<br/> are made for you to unwind after a long day.</p>
             </div>
             </div>
            </div>:''}
         </div>
-        <div id="#">
+        <div>
            {event? 
            <div className="community">
             <div className="community-box">

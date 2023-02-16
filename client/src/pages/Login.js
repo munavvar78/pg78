@@ -14,7 +14,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
   rel="stylesheet"
@@ -29,7 +29,7 @@ const useStyle = makeStyles({
     boxShadow: "0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%)",
     borderRadius: "8px",
     margin: "auto",
-    marginTop:"200px",
+    marginTop: "200px",
     padding: "1rem",
     alignItems: "center",
     textAlign: "center",
@@ -37,6 +37,11 @@ const useStyle = makeStyles({
       width: "100%",
       margin: "8px",
     },
+    // "& .MuiButton-label":{
+    //   color:"black",
+    //   fontWeight:510,
+    //   fontSize:"15px"
+    // },
     "& .MuiButton-containedPrimary": {
       width: "92%",
       marginTop: "5px",
@@ -81,56 +86,62 @@ const Login = ({ setLoginUser }) => {
   };
   return (
     <div className="loginform">
-    <div className={classes.login}>
-      {console.log("user", values)}
-      <h1>Login</h1>
-      <TextField
-        name="email"
-        value={values.email}
-        variant="outlined"
-        label="email"
-        onChange={HandleChange}
-      ></TextField>
-      <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-        <OutlinedInput
-          id="outlined-adornment-password"
-          name="password"
-          value={values.password}
-          type={values.showPassword ? "password" : "text"}
+      <div className={classes.login}>
+        {console.log("user", values)}
+        <h1>Login</h1>
+        <TextField
+          name="email"
+          value={values.email}
+          variant="outlined"
+          label="email"
           onChange={HandleChange}
-          endAdornment={
-            <InputAdornment position="end">
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-                edge="end"
-              >
-                {values.showPassword ? (
-                  <VisibilityOffIcon />
+        ></TextField>
+        <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
+          <InputLabel htmlFor="outlined-adornment-password">
+            Password
+          </InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-password"
+            name="password"
+            value={values.password}
+            type={values.showPassword ? "password" : "text"}
+            onChange={HandleChange}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showPassword ? (
+                    <VisibilityOffIcon />
                   ) : (
                     <VisibilityIcon />
-                )}
-              </IconButton>
-            </InputAdornment>
-          }
-          label="Password"
-        />
-      </FormControl>
-      <Button variant="contained" color="primary" onClick={login}>
-        Login
-      </Button>
-
-      <div>or</div>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => history.push("/register")}
-      >
-        Register
-      </Button>
-    </div>
+                  )}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
+        <Button variant="contained" color="primary" onClick={login}>
+          Login
+        </Button>
+        <br />
+        <div className="Or">or</div>
+        <div className="loginnewuser">
+       <p> New User ? </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Link
+          className="signUp"
+          variant="contained"
+          color="primary"
+          onClick={() => history.push("/register")}
+        >
+          Register
+        </Link>
+        </div>
+      </div>
     </div>
   );
 };

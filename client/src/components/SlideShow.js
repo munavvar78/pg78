@@ -9,7 +9,7 @@ const SlideShow = () => {
   return (
     <div className='slideImage'>
         <div className='slideImageLogo'>
-            <h1>Ending PG finding woes<br/>
+            <h1>Ending PG finding 
 with BookMyPG</h1>
         </div>
         <SimpleImageSlider
