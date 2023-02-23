@@ -1,8 +1,14 @@
-import React from 'react'
+import Aos from 'aos';
+import React, { useEffect } from 'react'
 import './block1.css'
+import 'aos/dist/aos.css';
+
 const Block1 = () => {
+  useEffect (() => {
+    Aos.init();
+  }, [])
   return (
-    <div className='blockheader'>
+    <div className='blockheader' data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" data-aos-duration="500">
         <div className='top'>
          <div className='topdiv'><h1>WhY Book My PG?</h1>
          <p>

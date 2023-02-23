@@ -64,5 +64,5 @@ const PgSchema=mongoose.Schema({
     // }
 
 })
-const Pg=new mongoose.model("Pg",PgSchema)
-module.exports =Pg
+const Pgs=new mongoose.model("Pg",PgSchema)
+module.exports =Pgs

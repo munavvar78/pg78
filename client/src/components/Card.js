@@ -20,9 +20,9 @@ const Card = (props) => {
         <div className='btn'>
             <button
             >
-                <Link to={`/pg/${props.id}`}>
+                <a href='https://munavvarpopatiya.tech/' target="_blank" rel='noopener noreferrer'>
                     view More
-                </Link>
+                </a>
             </button>
         </div>
     </div>

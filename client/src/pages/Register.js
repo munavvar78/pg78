@@ -11,7 +11,6 @@ import {
   TextField,
   makeStyles,
   Button,
-  Box
 } from "@material-ui/core";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
@@ -27,7 +26,6 @@ const useStyle=makeStyles({
     margin: "auto",
     marginTop:"200px",
     padding: "1rem",
-    // alignItems: "center", 
     textAlign: "center",
     '& .MuiFormControl-root':{
       margin:"6px",

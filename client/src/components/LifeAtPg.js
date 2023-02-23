@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './lifeatpg.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { Link } from "react-router-dom";
 
 const LifeAtPg=()=> {
+  useEffect(() => {
+    AOS.init();
+  }, [])
     const[community,setCommunity]=useState(true)
     const[comfert,setComfert]=useState(false)
     const[event,setEvent]=useState(false)
@@ -22,7 +28,7 @@ const LifeAtPg=()=> {
       setCommunity(false)
     }
     return (
-    <div className="lifeatpg">
+    <div className="lifeatpg"  data-aos="fade-left">
       <div className="lifeatpglogo">
         <h2>Life at PG</h2>
       </div>

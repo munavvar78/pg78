@@ -1,47 +1,48 @@
 .aboutdetailfirst{
-    display: flex;
+    /* display: flex; */
     margin-top: 10px;  
-    /* align-items:center;   */
     padding: 0; 
     box-sizing: border-box;
 }
 
-.abu{
-    justify-content: center;
-    right: 0;
-    /* margin-left: 250px; */
-    margin-top: 60px;
-    position: absolute;
-    height: 450px;
-    margin-right: 120px;
-    /* object-fit: contain; */
-}
 
 .aboutwriting{
-    order: 3;
+    flex:50%;
+    /* order: 3; */
     margin-top: 50px;
-    position:absolute;
+    position:relative;
+    text-align: justify;
+    /* width: 50%;   */
     color: rgb(255, 255, 255);
-    margin-left: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .aboutwriting h1{
     font-weight: bold;
     font-size: 2.9pc;
-    color: aqua;;
+    color: rgb(255, 255, 255);;
 }
 .aboutwriting p{
     margin-top: 40px;
     font-weight: 800;
     font-size: 19px;
 }
+.aboutImage{
+    flex: 20%;
+}
+.abu{
+    position: relative;
+    height: 450px;
+}
 .aboutdetailfirst p span{
-    color: rgba(25, 15, 56, 0.779);
+    color: rgba(255, 255, 255, 0.779);
 }
 
 .aboutbox{
-    border:solid rgb(0, 119, 255) ;
-    background-color: rgb(0, 119, 255);
-    height: 600px;
+    border:solid rgb(0, 0, 0) ;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 75vh;
     width: 100vw;
 }
 .aboutcommunity{
@@ -50,22 +51,26 @@
 
 }
 .aboutcommunitywrite {
-    margin-left: 200px;
+    flex:50%;
     font-size: larger;
-    margin-right: 190px;
+    margin-left: 15px;
+    text-align: justify;
 }
 .aboutcommunitywrite h1{
     margin-bottom: 20px;
     font-weight:300;
     color:rgb(50, 50, 93);
 }
-.aboutcommunitywrite h1 span{
-    color: #3460ac;
-    font-weight: bold;
-}
 .aboutcommunitywrite p{
-    font-size:20px;
+    font-size:25px;
     font-weight: 530;
+}
+.aboutcommunityphoto{
+    display: flex;
+    justify-content: center;
+    flex: 50%;
+    float: right;
+    /* margin-right: 20px; */
 }
 .aboutwhat{
     margin-top: 80px;
@@ -82,11 +87,13 @@
 }
 .aboutwhatboximg{
     margin-top: 70px;
+    flex: 20%;
     margin-left: 200px;
 }
 .aboutwhatboxwrite{
+    flex: 80%;
     margin-top: 70px;
-    margin-left: 140px;
+    /* margin-left: 140px; */
 }
 .aboutwhatboxwrite h1{
     margin-bottom: 20px;
@@ -103,15 +110,50 @@
 }
 .aboutteam{
     margin-top: 50px;
-    border: solid #ffffff;
-    background-color: aquamarine;
+    border:0px solid #000000;
+    background-color: rgb(53, 84, 84);
     height: 600px;
+    color: #ffffff;
+    margin-bottom: 80px;
 }
 .aboutteam h1{
     text-align: center;
+    margin-top: 20px;
 }
 .aboutcard{
     display: flex;
     margin-top: 20px;
     justify-content: space-around;
+}
+@media screen and (max-width: 460px) {
+        .aboutbox{
+            flex-direction: column;
+            height: 120vh;
+        }
+        .aboutImage{
+            display: none;
+        }
+        .aboutcommunity{
+            display: flex;
+            flex-direction: column-reverse;
+            
+        }
+        .aboutcommunityphotofirst{
+            height: 350px;
+            margin-left: 10px;
+        }
+        .aboutcommunitywrite{
+            margin-right: 14px;
+        }
+        .aboutwhatbox{
+            flex-direction: row;
+        }.aboutwhatboximg img{
+            height: 150px;
+            margin-top: 50px;
+            margin-right: 12px;
+        }.aboutwhatboximg{
+        margin-left: 0px;}
+        .aboutwhatboxwrite{
+            margin-top: 120px;
+        }
 }

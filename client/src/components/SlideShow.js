@@ -1,13 +1,19 @@
-import React from 'react'
+import Aos from 'aos';
+import React, { useEffect } from 'react'
 import SimpleImageSlider from "react-simple-image-slider";
 import './slideshow.css'
+import 'aos/dist/aos.css';
+
 const images=[
   {url:"https://www.gopgo.in/assets/new_ui/webp_images/homeEndingpgwoeSlider3-2a05b9d6e5fd3995723f026bb709b79061b55d0a9c666dfbc154c6623cf064c2.webp"},
   {url:"https://www.gopgo.in/assets/new_ui/webp_images/homeEndingpgwoeSlider1-eaacd45db4ffd4c17f2094840fa46ce9b3d72323c3d2721871437e3af7a5c51d.webp"}
 ]
 const SlideShow = () => {
+  useEffect (() => {
+    Aos.init();
+  }, [])
   return (
-    <div className='slideImage'>
+    <div className='slideImage' data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" data-aos-duration="500">
         <div className='slideImageLogo'>
             <h1>Ending PG finding 
 with BookMyPG</h1>
