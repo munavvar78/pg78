@@ -59,10 +59,6 @@ const PgSchema=mongoose.Schema({
         type:Boolean
     },
 
-    // lastName:{
-    //     type:String
-    // }
-
 })
 const Pgs=new mongoose.model("Pg",PgSchema)
 module.exports =Pgs
