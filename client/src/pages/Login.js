@@ -77,7 +77,7 @@ const Login = ({ setLoginUser }) => {
     const { email, password } = values;
     if (email && password) {
       axios.post("http://localhost:8000/login", values).then((res) => {
-        console.log(res.data.user);
+        console.log(res.data.user); 
         alert(res.data.message);
         setLoginUser(res.data.user);
         history.push("/");

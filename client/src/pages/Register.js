@@ -11,57 +11,74 @@ import {
   TextField,
   makeStyles,
   Button,
+  FormControlLabel,
+  Checkbox,
 } from "@material-ui/core";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
-const useStyle=makeStyles({
-  register:{
+const useStyle = makeStyles({
+  register: {
     width: "400px",
-    height:"430px",
+    height: "470px",
     background: "#fff",
-    border:" 1px solid #dddfe2",
+    border: " 1px solid #dddfe2",
     boxShadow: "0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%)",
     borderRadius: "8px",
     margin: "auto",
-    marginTop:"200px",
+    marginTop: "100px",
     padding: "1rem",
     textAlign: "center",
-    '& .MuiFormControl-root':{
-      margin:"6px",
-      width:'92%'
+    "& .MuiFormControl-root": {
+      margin: "6px",
+      width: "92%",
     },
-    '& .MuiButton-containedPrimary':{
-      width:"86%",
-      marginTop:"2px",
-    }
-  }
-
-
-})
+    "& .MuiButton-containedPrimary": {
+      width: "86%",
+      marginTop: "2px",
+    },
+    "& .MuiFormControlLabel-root": {
+      display: "flex",
+      marginLeft: "4px",
+    },
+  },
+});
 const Register = () => {
-  const classes=useStyle()
+  
+  const classes = useStyle();
   const history = useHistory();
+  const [state, setState] = useState({
+  });
   const [values, setValues] = useState({
     name: "",
     email: "",
     password: "",
     reEnterePassword: "",
     showPassword: "true",
+    pgowner: "false",
   });
   const HandleChangeLogin = (e) => {
     const { name, value } = e.target;
-    console.log(name,value)
+    console.log(name, value);
     setValues({
       ...values,
       [name]: value,
     });
   };
+  const HandleChangeChecked=(e)=>{
+    const {name}=e.target ;
+    console.log(name);
+    setValues({
+      ...values,
+      [name]: e.target.checked,
+    });
+
+  }
   const register = (event) => {
     const { name, email, password, reEnterePassword } = values;
     if (
       name &&
-      email &&
+      email &&  
       password &&
       reEnterePassword &&
       password === reEnterePassword
@@ -94,7 +111,7 @@ const Register = () => {
         label="name"
         onChange={HandleChangeLogin}
       ></TextField>
-      
+
       <TextField
         name="email"
         value={values.email}
@@ -120,7 +137,7 @@ const Register = () => {
               >
                 {values.showPassword ? (
                   <VisibilityOffIcon />
-                  ) : (
+                ) : (
                   <VisibilityIcon />
                 )}
               </IconButton>
@@ -130,7 +147,9 @@ const Register = () => {
         />
       </FormControl>
       <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-        <InputLabel htmlFor="outlined-adornment-password">reEnterePassword</InputLabel>
+        <InputLabel htmlFor="outlined-adornment-password">
+          reEnterePassword
+        </InputLabel>
         <OutlinedInput
           id="outlined-adornment-password"
           name="reEnterePassword"
@@ -147,7 +166,7 @@ const Register = () => {
               >
                 {values.showPassword ? (
                   <VisibilityOffIcon />
-                  ) : (
+                ) : (
                   <VisibilityIcon />
                 )}
               </IconButton>
@@ -156,12 +175,18 @@ const Register = () => {
           label="reEnterePassword"
         />
       </FormControl>
+      <FormControlLabel
+        control={<Checkbox onChange={HandleChangeChecked} name="pgowner" />}
+        label="PgOwner"
+      />
 
-      <Button variant="contained" color="primary" onClick={register}>Register</Button>
+      <Button variant="contained" color="primary" onClick={register}>
+        Register
+      </Button>
       <br />
-        <div className="Or">or</div>
-        <div className="loginnewuser">
-       <p> Existing User ? </p>&nbsp;&nbsp;
+      <div className="Or">or</div>
+      <div className="loginnewuser">
+        <p> Existing User ? </p>&nbsp;&nbsp;
         <Link
           className="signUp"
           variant="contained"
@@ -170,7 +195,7 @@ const Register = () => {
         >
           Login
         </Link>
-        </div>
+      </div>
     </div>
   );
 };

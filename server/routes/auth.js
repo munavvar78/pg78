@@ -11,9 +11,10 @@ router.post("/register", async (req, res) => {
       res.send({ message: "user already registered" });
     } else {
       const user = new Users({
-        name,
-        email,
-        password,
+        name:req.body.name,
+        email:req.body.email,
+        password:req.body.password,
+        pgowner:req.body.pgowner
       });
       const token = await user.generatedAuthToken();
 

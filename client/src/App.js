@@ -13,11 +13,15 @@ import PgInsert from "./pages/PgInsert";
 import PgDetail from "./pages/PgDetail";
 import ThemeContextProvider from "./contexts/ThemeContext";
 import NotAuthHome from "./pages/NotAuthHome";
+import PgOwner from "./pages/PgOwner";
 // in this usestate hooks we can pass the data from one componenets to the other components
 const App = () => {
   // let { id } = useParams();
 
   const [user,setLoginUser]=useState([])
+  const [PgsOwner,setPgsOwner]=useState([])
+  const [path,setPath]=useState("pg")
+  console.log(path);
   return (
     <div>
       {/* <AnimatedCursor/> */}
@@ -25,7 +29,7 @@ const App = () => {
               <Router>
         <Switch>
           <Route path="/" exact>
-          <Home user={user}/>
+          <Home user={user} PgsOwner={PgsOwner}/>
           </Route>
           <Route path="/home">
             <Home />
@@ -35,12 +39,14 @@ const App = () => {
           </Route>
           <Route path="/pg" exact>
           {
-            user && user._id ?<Pg user={user}/>:<Login setLoginUser={setLoginUser}/>}
+            user && user._id ?<Pg user={user} setPath={setPath}/>:<Login setLoginUser={setLoginUser}/>}
           </Route>
-          <Route path='/pg/:id'>
+          
+            <Route path={`${path}/:id`}>
           {
             user && user._id ?<PgDetail user={user}/>:<Login setLoginUser={setLoginUser}/>}
           </Route>
+          
           <Route path="/blog">
           {
             user && user._id ?<About user={user}/>:<Login setLoginUser={setLoginUser}/>}
@@ -54,8 +60,12 @@ const App = () => {
           <Route path="/register">
             <Register />
           </Route>
+          <Route path='/pglist'>
+            <PgOwner user={user} setPath={setPath}/>
+          </Route>
           <Route path='/pginsert'>
-            <PgInsert/>
+          {
+            user && user._id ?<PgInsert user={user} setPgsOwner={setPgsOwner}/>:<Login setLoginUser={setLoginUser}/>}
           </Route>
         </Switch>
       </Router>

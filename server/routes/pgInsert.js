@@ -3,11 +3,7 @@ const router = express.Router();
 const Pgs = require("../model/pg");
 
 router.post("/pginsert", (req, res) => {
-    upload(req, res, (err) => {
       console.log(req.body.file);
-      if (err) {
-        console.log(err);
-      } else {
         const newPg = new Pgs({
           name: req.body.name,
           select: req.body.select,
@@ -28,12 +24,12 @@ router.post("/pginsert", (req, res) => {
           reception: req.body.reception,
           elveter: req.body.elveter,
           carparking: req.body.carparking,
+          token: req.body.token,
         });
         newPg
           .save()
-          .then(() => res.send({ message: "succefully registered" }))
+          .then(() => res.send({ message: "succefully registered",newPg }))
           .catch((err) => console.log(err));
-      }
-    });
+      
   });
   module.exports=router;

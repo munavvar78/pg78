@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import './pg.css'
 import CardPg from "../components/CardPg";
+import { useHistory } from "react-router-dom";
 
 const useStyle=makeStyles({
   root:{
@@ -25,7 +26,10 @@ const useStyle=makeStyles({
   
 })
 
-const Pg = ({user}) => {
+const Pg = ({user,setPath}) => {
+  const history = useHistory();
+  console.log(history);
+  setPath(history.location.pathname)
   const [displayPg,setDisplayPg]=useState(false)
   const [displayDetail,setDisplayDetail]=useState(true)
   const [values,setValues]=useState({
@@ -112,6 +116,7 @@ const Pg = ({user}) => {
     id={singleData._id}  
     title={singleData.name}
     imageUrl={singleData.file}
+    setPath="/pg"
     body={singleData.price}
     />
        </div>

@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './cardpg.css'
 const CardPg = (props) => {
+    let { id } = useParams();
+    console.log(props);
     return (
         <div className='card' key={props.id}>
         <div className='card-container' key={props.id}>
@@ -20,7 +22,7 @@ const CardPg = (props) => {
             <div className='btn'>
                 <button
                 >
-                    <Link to={`/pg/${props.id}`}>
+                    <Link to={`${props.setPath}/${props.id}`}>
                         view More
                     </Link>
                 </button>

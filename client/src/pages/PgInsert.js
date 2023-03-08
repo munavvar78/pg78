@@ -12,22 +12,46 @@ import {
 import { Box } from "@mui/system";
 import axios from "axios";
 import React, { useState } from "react";
+import Header from "../components/Header";
+import Footer from '../components/Footer';
+import emoji from '../components/img/emoji.jpg'
+import './PgInsert.css'
 const useStyle = makeStyles({
   root: {
-    margin: "10px",
     "& .MuiFormControl-root": {
       width: "30%",
       display: "flex",
-      margin: "7px",
+      marginBottom:"14px",
+      marginLeft:"12px"
     },
     "& .MuiBox-root": {
       display: "flex",
-      flexDirection: "column",
+      flexDirection: "row",
+      flexWrap:"wrap"
     },
+    "& .MuiButtonBase-root":{
+      marginBottom:"12px",
+    },
+    '& .MuiButton-label':{
+      fontWeight:"bold",
+    },
+    '& .MuiButton-label:hover':{
+      color:"black",
+    }
   },
 });
-const PgInsert = () => {
-  const [state, setState] = useState({
+const PgInsert = ({user,setPgsOwner}) => {
+  console.log(user.tokens[0].token);
+  const [pgdetail,setPgdetail]=useState(false);
+  const [values, setValues] = useState({
+    name: "",
+    select: "",
+    file: "",
+    price: "",
+    description: "",
+    address: "",
+    number: "",
+    token:user.tokens[0].token,
     curfew: false,
     studyroom: false,
     deposite: false,
@@ -39,54 +63,34 @@ const PgInsert = () => {
     elveter: false,
     carparking: false,
   });
-  const [values, setValues] = useState({
-    name: "",
-    select: "",
-    file: "",
-    price: "",
-    description: "",
-    address: "",
-    number: "",
-  });
   const classes = useStyle();
+  const HandleClick=(e)=>{
+    setPgdetail(!pgdetail);
+  }
   const HandleChange = (e) => {
     const { name, value } = e.target;
     setValues({
       ...values,
       [name]: value,
     });
-    setState({
-      ...state,
+  };
+  const HandleChangeChecked=(e)=>{
+    const {name}=e.target
+    setValues({
+      ...values,
       [name]: e.target.checked,
     });
-  };
+    
+  }
+  console.log(values);
   const SubmitHandler = (event) => {
-    const formData = new FormData();
-    formData.append("file", values.file);
-    formData.append("name", values.name);
-    formData.append("select", values.select);
-    formData.append("price", values.price);
-    formData.append("number", values.number);
-    formData.append("aboutus", values.aboutus);
-    formData.append("location", values.location);
-    formData.append("product", values.product);
-    formData.append("address", values.address);
-    formData.append("curfew", state.curfew);
-    formData.append("studyroom", state.studyroom);
-    formData.append("deposite", state.deposite);
-    formData.append("visitorallowed", state.visitorallowed);
-    formData.append("meals", state.meals);
-    formData.append("kitchen", state.kitchen);
-    formData.append("freeparking", state.freeparking);
-    formData.append("reception", state.reception);
-    formData.append("elveter", state.elveter);
-    formData.append("carparking", state.carparking);
-    console.log(formData);
     const { name, select } = values;
     if (name && select) {
-      axios.post("http://localhost:8000/pginsert", formData).then((res) => {
+      axios.post("http://localhost:8000/pginsert", values).then((res) => {
         event.preventDefault();
         alert(res.data.message);
+        setPgsOwner(res.data.newPg)
+        console.log(res.data);
       });
     } else {
       alert("invalid input");
@@ -95,6 +99,24 @@ const PgInsert = () => {
   };
   return (
     <div className={classes.root}>
+      <Header user={user}/>
+      <div className="pginsert">
+
+      <div className="pginsertheader"> 
+      <h1>
+        Hyy Pg Owner Welcome to the PgFinder,Plese Fill Your Pg Detail And Collabarte With Us
+      </h1>
+      <p>Here You Can Fill All Your PG Detail And Grow Your Pg To Mass Population
+     Through This Site We Can Help To Many Small Pg Owner To Chance Thier Pg To Grow</p>
+     <Button variant="contained" color="primary"   onClick={HandleClick}>Click Here For To Insert Pg Detail</Button>
+      </div>
+      <div className="pginsertimage">
+        <img src={emoji} alt="hii" height="150px" className="pginsertemoji"></img>
+      </div>
+         </div>
+         {
+          pgdetail ?
+          <div className="pginsertdetail">  
       <TextField
         name="name"
         label="name"
@@ -166,43 +188,43 @@ const PgInsert = () => {
       </FormControl>
       <Box sx={{ display: "flex" }}>
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="curfew" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="curfew" />}
           label="No Curfew"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="studyroom" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="studyroom" />}
           label="Study Room"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="deposite" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="deposite" />}
           label="Security Deposite"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="visitorallowed" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="visitorallowed" />}
           label="Visiter Allowed"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="meals" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="meals" />}
           label="Meals Available"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="kitchen" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="kitchen" />}
           label="Kitchen"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="freeparking" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="freeparking" />}
           label="Free Parking"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="reception" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="reception" />}
           label="24 Hourse Reception"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="elveter" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="elveter" />}
           label="Elveter"
         />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChange} name="carparking" />}
+          control={<Checkbox onChange={HandleChangeChecked} name="carparking" />}
           label="Car Parking"
         />
       </Box>
@@ -216,6 +238,9 @@ const PgInsert = () => {
       <Button variant="contained" color="primary" onClick={SubmitHandler}>
         submit
       </Button>
+      </div>
+      :""}
+      <Footer/>
     </div>
   );
 };

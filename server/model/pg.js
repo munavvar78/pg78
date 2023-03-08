@@ -58,6 +58,9 @@ const PgSchema=mongoose.Schema({
     carparking:{
         type:Boolean
     },
+    token:{
+        type:String
+    }
 
 })
 const Pgs=new mongoose.model("Pg",PgSchema)

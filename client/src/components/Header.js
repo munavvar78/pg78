@@ -12,7 +12,7 @@ import Login from "../pages/Login";
 
 const Header = ({user}) => {
   const [isMobile, setIsMobile] = useState(false);
- 
+  console.log(user);
   return (
     <div className="header">
       <nav className="main-nav">
@@ -37,16 +37,21 @@ const Header = ({user}) => {
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/food">Food</Link>
-            </li>
+            {user.pgowner ?
+              <li>
+              <Link to="/pginsert">pginsert</Link>
+            </li>:""
+            }
+            {user.pgowner ?
+              <li>
+              <Link to="/pglist">PgOwner</Link>
+            </li>:""
+            }
             <li>
               <Link to="/pg">pg</Link>
             </li>
-            {user && user._id ?<li><h1>Welcome {user.name}</h1></li>:<li><Link to='/login'>Login</Link></li>}
+            {user && user._id ?<li><h1 color="blue">Welcome {user.name}</h1></li>:<li><Link to='/login'>Login</Link></li>}
+            {user && user._id ?<li></li>:<li><Link to='/register'>Register</Link></li>}
           </ul>
         </div>
         <button

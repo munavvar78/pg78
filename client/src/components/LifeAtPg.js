@@ -56,7 +56,7 @@ const LifeAtPg=()=> {
             <div className="communitydetail">
                 <img src="https://www.gopgo.in/assets/new_look/homeLifeatpgoCommunity-0b97bec3d94d557fdeeca2f20c77580cc76ef3324d482da8ad63c3b3840dd8c4.png" alt="rhr"></img>
                 <h3>Commnity</h3>
-                <p>Moving to a new city can be daunting.<br/>At PGO we make sure<br/> that you always feel like you belong.</p>
+                <p>Moving to a new city can be daunting.<br/>At BookMyPg we make sure<br/> that you always feel like you belong.</p>
             </div>
             </div>
            </div>

@@ -1,7 +1,6 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
 import { Snackbar, IconButton, SnackbarContent } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
-// import axios from 'axios';
 import emailjs from "@emailjs/browser";
 import isEmail from "validator/lib/isEmail";
 import { makeStyles } from "@material-ui/core/styles";
@@ -11,10 +10,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaGithub,
-  // FaCodepen,
   FaInstagram,
-  // FaGitlab,
-  // FaMediumM,
 } from "react-icons/fa";
 import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
 import { FiPhone, FiAtSign } from "react-icons/fi";
@@ -189,7 +185,6 @@ function Contacts() {
       data-aos-offset="200"
       data-aos-easing="ease-in-out"
       data-aos-duration="500"
-      // style={{ backgroundColor:"gray" }}
     >
       <div className="contacts--container">
         <h1 style={{ color: purple }}>Contacts</h1>

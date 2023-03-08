@@ -18,6 +18,9 @@ const employeeSchema=new mongoose.Schema({
         type:String,
         require:true
     },
+    pgowner:{
+        type:Boolean
+    },
     tokens:[{
         token:{
             type:String,

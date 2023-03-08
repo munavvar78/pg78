@@ -50,7 +50,12 @@ h3,p{
     transition: 0.2s;
 }
 .btn button:hover{
-    background: rgba(70, 73, 74, 0.993);
+    color: white;
+    text-decoration: white;
+    background: rgba(15, 15, 15, 0.993);
+}
+.btn button a:hover{
+    color: white;
 }
 a{
     text-decoration: none;

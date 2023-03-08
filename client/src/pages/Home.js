@@ -6,8 +6,9 @@ import HomeContent from "../components/HomeContent";
 import LifeAtPg from "../components/LifeAtPg";
 import SlideShow from "../components/SlideShow";
 
-const Home = ({user}) => {
+const Home = ({user,PgsOwner}) => {
   console.log(user)
+  console.log(PgsOwner)
   return (
     <div>
      <Header user={user}/>

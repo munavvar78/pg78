@@ -46,8 +46,9 @@ body {
 }
 .menu-link ul li h1 {
   font-size: 20px;
-  width: 150px;
-  color: #A020F0;
+  width: 200px;
+  color: #000000;
+  text-transform: uppercase;
 }
 .menu-link ul li:hover > a {
   transform-origin: left;

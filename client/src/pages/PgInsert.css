@@ -1,0 +1,33 @@
+.pginsert{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.pginsertheader{
+    width: 10%;
+    text-align: justify;
+    margin-left:45px;
+    flex-grow: 1;
+}
+.pginsertheader h1{
+    margin-bottom: 12px;
+}
+.pginsertheader p{
+    margin-bottom: 12px;
+    font-size: x-large;
+}
+.pginsertemoji{
+    align-items: flex-end;
+    display: flex;
+    /* flex-grow: 2 */
+}
+.pginsertimage{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+.pginsertdetail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

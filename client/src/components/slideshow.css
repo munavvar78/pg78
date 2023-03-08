@@ -11,7 +11,7 @@
     font-family: "trueno-sb";
     font-weight: bolder;
     font-size: 40px;
-    color: #A020F0;
+    color: rgb(29, 66, 145);
 }
 @media screen and (max-width: 480px) {
     .slideImage{

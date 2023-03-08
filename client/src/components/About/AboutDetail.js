@@ -1,10 +1,16 @@
-import React from "react";
+import Aos from "aos";
+import React, { useEffect } from "react";
 import Card from "../Card";
 import "./aboutdetail.css";
+import 'aos/dist/aos.css';
+
 const AboutDetail = () => {
+  useEffect (() => {
+    Aos.init();
+  }, [])
   return (
     <div>
-        <div className="aboutbox">
+        <div className="aboutbox" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in" data-aos-duration="500">
           <div className="aboutwriting">
             <h1>The daunting process of finding a new home made easy</h1>
 
@@ -36,7 +42,7 @@ const AboutDetail = () => {
             ></img>
         </div>
       </div>
-        <div className="aboutcommunity">
+        <div className="aboutcommunity" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in" data-aos-duration="500">
           <div className="aboutcommunitywrite">
             <h1>We create communities</h1>
             <p>
@@ -54,7 +60,7 @@ const AboutDetail = () => {
               other.
             </p>
           </div>
-          <div className="aboutcommunityphoto">
+          <div className="aboutcommunityphoto" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in" data-aos-duration="500">
           <img
             className="aboutcommunityphotofirst"
             src="https://www.gopgo.in/assets/new_ui/img/aboutusWhowearecharacterimage-36a314c7907b979c992718b182b3a81bd614e4cfbad23860d444c4ea58046831.png"
@@ -62,8 +68,8 @@ const AboutDetail = () => {
           ></img>
           </div>
       </div>
-      <div className="aboutwhat">
-        <div className="aboutwhatbox">
+      <div className="aboutwhat" >
+        <div className="aboutwhatbox" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in" data-aos-duration="500">
           <div className="aboutwhatboximg">
             <img
               src="https://www.gopgo.in/assets/new_ui/img/aboutusWhatwedoimg-43b5f834b15238c16c52d8bbc4baa96786f0dcfefb34b04b8d3769018ef7d7b9.png"
@@ -86,7 +92,7 @@ const AboutDetail = () => {
           </div>
         </div>
       </div>
-      <div className="aboutteam">
+      <div className="aboutteam" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in" data-aos-duration="500">
         <h1>Our Team</h1>
         <div className="aboutcard">
           {/* <Card
