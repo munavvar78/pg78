@@ -31,3 +31,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+.pginsertfacility{
+    display: flex;
+    flex-direction: column;
+}

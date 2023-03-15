@@ -1,85 +1,146 @@
-.pgdetailbox{
+.pgdetail{
+    height: auto;
+}
+.pgdetail-desc{
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    margin-top: 12px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+}
+.pgimage{
+    height: 300px;
+    margin: auto;
+    width: 300px;
+    object-fit: cover;
+    /* width: 200px; */
+}
+.pgdetail-desc-college{
+    padding: 16px 0 16px 20px;
+    display: flex;
+    margin-left: 35px;
+
+}
+.pgdetail-desc-address{
+    margin-left: 12px;
+    border-bottom: 1px solid #756d6d;
+    height: 50px;
+    font-size: x-large;
+}
+.pgdetail-desc-props{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-top: 50px;
 }
-.pgdetailbox img{
-    margin-left: 150px;
-    margin-top: 150px;
-    height: 400px;
-}
-.open24{
-    color: rgb(51, 128, 51);
-    font-size: 20px;
-}
-.cityname{
-    font-size: 20px;
-}
-.aboutpg{
+.pgdetail-desc-serv{
     display: flex;
-}
-.desc{
-    flex: 50%;
-    text-align: justify;
-    font-size: 17px;
-    font-weight: bold;
-}
-.imageabout{
-    flex: 50%;
-}
-.imagepg{
-    height: 300px;
-}
-.dataabout{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.datalocation{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.dataproduct{
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-.pgdetailname{
-    margin-top: 5px;
-    margin-left: 10px;
-    border: 0px solid rgb(255, 255, 255);
-    height: 150px;
-}
-
-.servicepg{
-    display: flex;
-    height: 250px;
-}
-.serviceul{
-    display: flex;
-    flex: 50%;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.service{
-    width: 200px;
+.pgdetail-desc-facu{
     display: flex;
-    flex-direction:row;
-    margin-right: 50px;
+    flex: 1 0 21%; 
+    margin-left: 35px;
+    flex-direction: column;
+    border-top: 1px solid #e8e8e8;
+    padding: 16px 0 16px 20px;
+    /* align-items: center; */
+}
+.pgdetail-desc-facu-amount{
+    color: #909090;
+}
+.pgdetail-header{
+    height: 150px;
+    padding-left: 120px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
-.service h3{
-    margin-left: 12px;
-    margin-bottom: 4px;
+.pgdetail-header-info{
+    padding-top: 50px;
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    border-right: 1px solid #9a8686;
 }
-.pgaddress{
-    margin-top: 50px;
-    font-size: 17px;
-    margin-right: 150px;
-    border: 0px solid rgb(125, 120, 120);
+.pgdetail-header-info span{
+    color: #756d6d;
+    margin-right: 2px;
 }
-.pgaddress h1{
-    margin-bottom: 12px;
+.pgdetail-header-info-price{
+    padding-top: 10px;
+    margin-right: 2px;
+    font-size: xx-large;
+    font-weight: 400;
 }
-.checkIcon{
-    margin-top: 2px;
+.partner{
+    border: 1px solid white;
+    background-color:#f2d48d;
+    border-bottom-right-radius:5cm;
+    width: 140px;
+}
+.pgdetail-header-pgname{
+    box-sizing: border-box;
+    /* border-right: 1px solid #9a8686 */
+}
+.phoneno{
+    display: flex;
+    align-items: center;
+}
+.pgdetail-header-occupancy{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.pgdetail-header-occupancy span{
+    padding-top: 30px;
+    color: #756d6d;
+    font-size:x-large;
+}
+
+.gender{
+    /* border: 1px solid ; */
+    margin-left: 5px;
+    margin-right: 5px;
+    /* padding-left: 12spx; */
+    height: 17px;
+    background-color: #909090;
+}
+.pgdetail-desc-amenitites{
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column  ;
+    width: auto;
+    height: auto;
+    margin-top: 12px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+}
+.pgdetail-desc-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 0 21%;
+}
+.pgdetail-desc-list-style{
+    flex: 0 21%;
+}
+.props{
+    display: flex;
+}
+.pgdetail-desc-amentities{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pgdetail-desc-check{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
 }

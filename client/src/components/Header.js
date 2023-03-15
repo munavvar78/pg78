@@ -3,7 +3,7 @@ import "./Header.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import Avatar from '@mui/joy/Avatar';
 import Login from "../pages/Login";
 <script
   src="https://kit.fontawesome.com  /a076d05399.js"
@@ -52,6 +52,7 @@ const Header = ({user}) => {
             </li>
             {user && user._id ?<li><h1 color="blue">Welcome {user.name}</h1></li>:<li><Link to='/login'>Login</Link></li>}
             {user && user._id ?<li></li>:<li><Link to='/register'>Register</Link></li>}
+           {user && user._id ?<Avatar>{user.name[0].toUpperCase()}</Avatar>:"" }
           </ul>
         </div>
         <button

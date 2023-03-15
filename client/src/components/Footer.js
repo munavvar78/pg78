@@ -181,11 +181,7 @@ function Contacts() {
     <div
       className="contacts"
       id="contacts"
-      data-aos="fade-left"
-      data-aos-offset="200"
-      data-aos-easing="ease-in-out"
-      data-aos-duration="500"
-    >
+      data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" data-aos-duration="500">
       <div className="contacts--container">
         <h1 style={{ color: purple }}>Contacts</h1>
         <div className="contacts-body">

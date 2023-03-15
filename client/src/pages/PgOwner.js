@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
 const useStyle=makeStyles({
     root:{
+        backgroundColor:"#f1f1f1",
         '&  .MuiButtonBase-root':{
             marginBottom:"35px"
         }
@@ -44,10 +45,13 @@ const PgOwner = ({user,setPath}) => {
              <div>
        <CardPg
        id={singleData._id}  
-       title={singleData.name}
-       setPath="/pglist"
+       name={singleData.name}
        imageUrl={singleData.file}
-       body={singleData.price}
+       setPath="/pglist"
+       price={singleData.price}
+       address={singleData.address}
+       city={singleData.select}
+       college={singleData.nearcollege} 
        />
           </div>
             )

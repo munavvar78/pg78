@@ -20,23 +20,23 @@ const useStyle = makeStyles({
   root: {
     "& .MuiFormControl-root": {
       width: "30%",
-      display: "flex",
       marginBottom:"14px",
       marginLeft:"12px"
     },
     "& .MuiBox-root": {
-      display: "flex",
-      flexDirection: "row",
       flexWrap:"wrap"
     },
     "& .MuiButtonBase-root":{
-      marginBottom:"12px",
+      marginBottom:"1px",
     },
     '& .MuiButton-label':{
       fontWeight:"bold",
     },
     '& .MuiButton-label:hover':{
       color:"black",
+    },
+    '& .MuiFormControlLabel-root':{
+      marginLeft:'0px'
     }
   },
 });
@@ -46,22 +46,36 @@ const PgInsert = ({user,setPgsOwner}) => {
   const [values, setValues] = useState({
     name: "",
     select: "",
+    gender:"",
+    numberbed:"",
     file: "",
+    nearcollege:"",
     price: "",
-    description: "",
     address: "",
+    deposite: "",
     number: "",
     token:user.tokens[0].token,
-    curfew: false,
-    studyroom: false,
-    deposite: false,
-    visitorallowed: false,
+    wifi: false,
+    powerbackup: false,
+    roomcleaning: false,
+    carparking: false,
+    parking: false,
+    reception: false,
+    ac:false,
     meals: false,
     kitchen: false,
-    freeparking: false,
-    reception: false,
-    elveter: false,
-    carparking: false,
+    lift: false,
+    noticeperiod:false,
+    foodcharges:false,
+    getclosingtime:false,
+    smoking:false,
+    foodavailable:false,
+    visitorentry:false,
+    nonvegfood:false,
+    oppositegender:false,
+    loudmusic:false,
+    drinking:false,
+    party:false
   });
   const classes = useStyle();
   const HandleClick=(e)=>{
@@ -80,7 +94,6 @@ const PgInsert = ({user,setPgsOwner}) => {
       ...values,
       [name]: e.target.checked,
     });
-    
   }
   console.log(values);
   const SubmitHandler = (event) => {
@@ -148,29 +161,24 @@ const PgInsert = ({user,setPgsOwner}) => {
         onChange={HandleChange}
       ></TextField>
       <TextField
-        name="aboutus"
-        type="text"
-        multiline={true}
+        name="numberbed"
+        type="number"
         variant="outlined"
-        label="About Us"
+        label="Total Number Of Bed"
         onChange={HandleChange}
       ></TextField>
-      <TextField
-        name="location"
-        type="text"
-        multiline={true}
-        variant="outlined"
-        label="Location and OverView"
-        onChange={HandleChange}
-      ></TextField>
-      <TextField
-        name="product"
-        type="text"
-        multiline={true}
-        variant="outlined"
-        label="product and service"
-        onChange={HandleChange}
-      ></TextField>
+       <FormControl>
+        <InputLabel>Gender</InputLabel>
+        <Select
+          onChange={HandleChange}
+          label="Months"
+          name="gender"
+          value={values.gender}
+        >
+          <MenuItem value="Boys">Boys</MenuItem>
+          <MenuItem value="Girls">Girls</MenuItem>
+        </Select>
+      </FormControl>
       <FormControl>
         <InputLabel>city</InputLabel>
         <Select
@@ -179,65 +187,130 @@ const PgInsert = ({user,setPgsOwner}) => {
           name="select"
           value={values.select}
         >
-          <MenuItem value="gandhinager">gandhinage</MenuItem>
-          <MenuItem value="ahmedabad">Ahmedabad</MenuItem>
-          <MenuItem value="amreli">amreli</MenuItem>
-          <MenuItem value="surat">surat</MenuItem>
-          <MenuItem value="vadodra">vadodra</MenuItem>
+          <MenuItem value="Gandhinager">Gandhinage</MenuItem>
+          <MenuItem value="Ahmedabad">Ahmedabad</MenuItem>
+          <MenuItem value="Amreli">Amreli</MenuItem>
+          <MenuItem value="Surat">Surat</MenuItem>
+          <MenuItem value="Vadodra">Vadodra</MenuItem>
         </Select>
       </FormControl>
-      <Box sx={{ display: "flex" }}>
+      <TextField
+        name="nearcollege"
+        type="text"
+        multiline={true}
+        variant="outlined"
+        label="Near By College"
+        onChange={HandleChange}
+      ></TextField>
+      <div className="pginsertfacility">
+        <div>
+          <h2>Comman Area And Amenities</h2>
         <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="curfew" />}
-          label="No Curfew"
-        />
+          control={<Checkbox onChange={HandleChangeChecked} name="wifi" />}
+          label="Wifi"
+          />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="studyroom" />}
-          label="Study Room"
-        />
+          control={<Checkbox onChange={HandleChangeChecked} name="powerbackup" />}
+          label="Power Backup"
+          />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="deposite" />}
-          label="Security Deposite"
-        />
+          control={<Checkbox onChange={HandleChangeChecked} name="roomcleaning" />}
+          label="Room Cleaning Service"
+          />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="visitorallowed" />}
-          label="Visiter Allowed"
-        />
+          control={<Checkbox onChange={HandleChangeChecked} name="parking" />}
+          label="Parking"
+          />
+        <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="ac" />}
+          label="Ac Room"
+          />
+        <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="lift" />}
+          label="Lift"
+          />
+          </div>
+          <div>
+            <h2>Food And Kitchen</h2>
+        <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="foodavailable" />}
+          label="Food Available"
+          />
         <FormControlLabel
           control={<Checkbox onChange={HandleChangeChecked} name="meals" />}
           label="Meals Available"
-        />
+          />
         <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="kitchen" />}
-          label="Kitchen"
+          control={<Checkbox onChange={HandleChangeChecked} name="foodcharges" />}
+          label="Food Charges"
         />
-        <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="freeparking" />}
-          label="Free Parking"
-        />
-        <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="reception" />}
-          label="24 Hourse Reception"
-        />
-        <FormControlLabel
-          control={<Checkbox onChange={HandleChangeChecked} name="elveter" />}
-          label="Elveter"
-        />
+          </div>
+          <div>
+            <h2>Other Charges</h2>
+        <h4>Deposite Amount:</h4>
+        <TextField
+        name="deposite"
+        type="number"
+        variant="outlined"
+        label="Deposite Amount"
+        onChange={HandleChange}
+      ></TextField>
         <FormControlLabel
           control={<Checkbox onChange={HandleChangeChecked} name="carparking" />}
           label="Car Parking"
         />
-      </Box>
+        </div>
+        <div>
+          <h2>House Rules</h2>
+        <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="noticeperiod" />}
+          label="Notice Period"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="getclosingtime" />}
+          label="Gate Closing Time"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="visitorentry" />}
+          label="Visitor Entery"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="nonvegfood" />}
+          label="Non-Veg Food"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="oppositegender" />}
+          label="Opposite Gender"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="loudmusic" />}
+          label="Loud Music"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="smoking" />}
+          label="Smoking"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="drinking" />}
+          label="Drinking"
+        />
+         <FormControlLabel
+          control={<Checkbox onChange={HandleChangeChecked} name="party" />}
+          label="Party"
+        />
+        </div>
 
       <TextField
         name="file"
         type="text"
-        label="url"
+        label="Image Url"
         onChange={HandleChange}
-      ></TextField>
-      <Button variant="contained" color="primary" onClick={SubmitHandler}>
+        ></TextField>
+        
+      <Button variant="contained" style={{width:"35%"}} color="primary" onClick={SubmitHandler}>
         submit
       </Button>
+        </div>
       </div>
       :""}
       <Footer/>

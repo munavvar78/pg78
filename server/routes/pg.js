@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Pgs = require("../model/pg");
 var ObjectId = require('mongodb').ObjectID;
-
 router.post("/pg", (req, res) => {
   console.log(req.body);
   select = req.body.select;

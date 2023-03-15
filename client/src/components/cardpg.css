@@ -1,64 +1,57 @@
-.card{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifs;
-    position:relative;
-    display: flex;
-    flex-direction: column;
+.pglist {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+  /* margin-top: 12px; */
+  border: 5px solid #ffffff;
+  background-color: #ffffff;
 }
-.card-container{
-    position: relative;
-    background-color: rgba(58, 26, 26, 0.532);
-    margin-left: 30px;
+.pglist-img-style{
+    height: 200px;
+    width: 200px;
+}
+.pglist-detail-price{
+    display: flex;
+    margin-left: 12px;
+    font-size: x-large;
+    color: rgb(143, 47, 41);
+    flex-direction: row;
+    border-bottom:1px solid #b4aeae;
+}
+.pglist-detail-price h3{
+    letter-spacing: 1px;
+}
+.pglist-detail-price-span{
+    margin-top: 6px;
+    margin-left: 4px;
+    color: #b4aeae;
+}
+.pglist-detail-price-food{
     color: black;
-    margin-bottom: 30px;
-    width: 296px;
-    overflow: hidden;
-    box-shadow: 0px 0px 15px -5px;
+    border: 18px solid white;
+    background-color: #b4aeae;
+    font-size: small;
 }
-.card-container:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px 0px;
-    transition: .5s;
-    animation: ease-in;
+.pglist-detail-name{
+    margin-left: 12px;
+    padding-bottom: 12px;
+    border-bottom:1px solid #b4aeae;
 }
-.image-container img{
-    overflow: hidden;
-    height: 296px;
-    width: 296px;
+.pglist-detail-college{
+    margin-left: 12px;
+    border-bottom: 1px solid #b4aeae;
+    padding-bottom: 12px;
 }
-.card-content{
-    margin: 1rem;
-    margin-top: 0.5rem;
-    text-transform: uppercase;
-
-}
-h3,p{
-    margin: 0;
-    padding: 0;
-}
-.card-title{
-    margin-bottom: 0.5rem;
-}
-.btn{
+.pglist-detail-expolre{
+    margin-top: 12px;
+    /* margin-left: 12px; */
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.btn button{
-    padding: 0.5rem;
-    background-color: rgb(255, 255, 255);
-    border: none;
-    margin-bottom: 0.5rem;
-    transition: 0.2s;
-}
-.btn button:hover{
-    color: white;
-    text-decoration: white;
-    background: rgba(15, 15, 15, 0.993);
-}
-.btn button a:hover{
-    color: white;
-}
-a{
-    text-decoration: none;
-    color:#000000;
-    font-weight: bold;
+.pglist-detail-address{
+    margin-left: 12px;
 }

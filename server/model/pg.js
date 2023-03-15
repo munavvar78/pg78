@@ -7,6 +7,9 @@ const PgSchema=mongoose.Schema({
     select:{
         type:String
     },
+    gender:{
+        type:String
+    },
     file:{
         type:String
     },
@@ -16,25 +19,52 @@ const PgSchema=mongoose.Schema({
     number:{
         type:Number
     },
-    aboutus:{
+    deposite:{
         type:String
     },
-    location:{
+    nearcollege:{
         type:String
     },
-    product:{
+    numberbed:{
         type:String
     },
     address:{
         type:String
     },
-    curfew:{
+    wifi:{
+        type:Boolean
+    },
+    powerbackup:{
         type:Boolean
     },
     studyroom:{
         type:Boolean
     },
-    deposite:{
+    roomcleaning:{
+        type:Boolean
+    },
+    parking:{
+        type:Boolean
+    },
+    ac:{
+        type:Boolean
+    },
+    kitchen:{
+        type:Boolean
+    },
+    noticeperiod:{
+        type:Boolean
+    },
+    foodcharges:{
+        type:Boolean
+    },
+    smoking:{
+        type:Boolean
+    },
+    foodavailable:{
+        type:Boolean
+    },
+    visitorentry:{
         type:Boolean
     },
     visitorallowed:{
@@ -52,10 +82,28 @@ const PgSchema=mongoose.Schema({
     reception:{
         type:Boolean
     },
-    elveter:{
+    lift:{
+        type:Boolean
+    },
+    loudmusic:{
+        type:Boolean
+    },
+    drinking:{
+        type:Boolean
+    },
+    party:{
+        type:Boolean
+    },
+    oppositegender:{
+        type:Boolean
+    },
+    getclosingtime:{
         type:Boolean
     },
     carparking:{
+        type:Boolean
+    },
+    nonvegfood:{
         type:Boolean
     },
     token:{

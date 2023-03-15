@@ -7,6 +7,7 @@ const cors=require("cors")
 const PgUser=require('../routes/pg')
 const pgInsertUser=require('../routes/pgInsert')
 const pgowner=require('../routes/pgowner')
+const PgDelete=require('../routes/pgdelet')
 require("../db/conn");
 
 app.use(cors())
@@ -20,5 +21,6 @@ app.use('/',pgInsertUser)
 app.use('/',PgUser)
 app.use('/',AuthUser)
 app.use('/',pgowner)
+app.use('/',PgDelete)
 
 app.listen(8000, () => console.log("listen on port 8000"));

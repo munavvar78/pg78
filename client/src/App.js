@@ -51,9 +51,6 @@ const App = () => {
           {
             user && user._id ?<About user={user}/>:<Login setLoginUser={setLoginUser}/>}
           </Route>
-          <Route path="/food">
-            <Food />
-          </Route>
           <Route path="/login">
             <Login setLoginUser={setLoginUser}/>
           </Route>

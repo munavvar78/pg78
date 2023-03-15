@@ -1,6 +1,9 @@
 .pg{
+    background-color: #f1f1f1;
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    margin-top: 60px;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 60px; */
 }
